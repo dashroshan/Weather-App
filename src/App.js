@@ -12,7 +12,7 @@ export default function App() {
 
     return (
         <>
-            <AnimatedCursor innerSize={10} outerSize={50} outerScale={2} color='19, 191, 248' />
+            <AnimatedCursor innerSize={10} outerSize={50} outerScale={2} color='255, 255, 255' />
             <Routes>
                 <Route element={<RouteTransition />}>
                     <Route path="/" element={<HomePage />} />

@@ -1,0 +1,131 @@
+.right {
+    background: linear-gradient(#283135, #1d2427);
+    height: calc(100% - 15vh + 2.5rem);
+    width: calc(100vw - max(25vw, 25rem) - 21vmin - 2rem);
+    margin-left: 0;
+    border-radius: 3rem;
+    border: 0.15rem solid #283135;
+    box-shadow: 0 1rem 0 #151a1d;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.dayCard {
+    min-width: 14rem;
+    background: linear-gradient(#3d484c, #2e383c);
+    border: 0.15rem solid #3d484c;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.dayName {
+    font-weight: bold;
+}
+
+.temp {
+    font-size: 0.9rem;
+}
+
+.weatherImg img {
+    height: 100%;
+    width: 100%;
+}
+
+.weatherImg {
+    width: auto;
+    height: 20vh;
+    min-height: 135px;
+}
+
+.next7 {
+    display: flex;
+    gap: 1rem;
+    min-width: 100%;
+    overflow-x: scroll;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.next7::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.next7::-webkit-scrollbar-track {
+    background: #2c3437;
+}
+
+.next7::-webkit-scrollbar-thumb {
+    background: #3d484c;
+}
+
+.next7Wrap {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.next7Wrap::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, rgba(40, 49, 53, 0), rgba(40, 49, 53, 1));
+    height: 100%;
+    width: 10rem;
+    right: 0;
+    top: 0;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.highligths {
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.card {
+    width: 12rem;
+    height: calc(65vh - 15.5rem);
+    background: linear-gradient(#3d484c, #2e383c);
+    border: 0.15rem solid #3d484c;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardDetails {
+    text-align: center;
+}
+
+.cardDetails>div:nth-of-type(1) {
+    opacity: 0.5;
+}
+
+.cardDetails>div:nth-of-type(2) {
+    font-size: 4rem;
+    font-weight: bold;
+    height: 4.75rem;
+    margin-top: -0.9rem;
+}
+
+.cardIcon {
+    height: 15vh;
+    margin: 0 auto;
+    min-height: 105px;
+}
+
+.cardIcon img {
+    height: 100%;
+}
+
+@media (max-height: 680px) {
+    .card {
+        min-height: 210px;
+    }
+}
