@@ -1,0 +1,44 @@
+.card {
+    min-width: 12rem;
+    width: 12rem;
+    height: calc(65vh - 15.5rem);
+    background: linear-gradient(#3d484c, #2e383c);
+    border: 0.15rem solid #3d484c;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardDetails {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.cardDetails>div:nth-of-type(1) {
+    opacity: 0.5;
+}
+
+.cardDetails>div:nth-of-type(2) {
+    font-size: 4rem;
+    font-weight: bold;
+    height: 4.75rem;
+    margin-top: -0.9rem;
+}
+
+.cardIcon {
+    height: 15vh;
+    margin: 0 auto;
+    min-height: 105px;
+}
+
+.cardIcon img {
+    height: 100%;
+}
+
+@media (max-height: 680px) {
+    .card {
+        min-height: 210px;
+    }
+}

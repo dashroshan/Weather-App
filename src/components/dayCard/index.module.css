@@ -1,0 +1,31 @@
+.dayCard {
+    min-width: 14rem;
+    background: linear-gradient(#3d484c, #2e383c);
+    border: 0.15rem solid #3d484c;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.dayName {
+    font-weight: bold;
+}
+
+.temp {
+    font-size: 0.9rem;
+}
+
+.weatherImg img {
+    height: 100%;
+    width: 100%;
+}
+
+.weatherImg {
+    width: auto;
+    height: 20vh;
+    min-height: 135px;
+}
