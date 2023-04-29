@@ -4,3 +4,23 @@
     height: 100vh;
     min-height: 680px;
 }
+
+footer {
+    display: none;
+}
+
+@media (max-width: 1140px) {
+    .home {
+        flex-direction: column;
+        height: unset;
+    }
+
+    footer {
+        display: unset;
+        background: #2e383c;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        border-top: 0.15rem solid #3d484c;
+    }
+}

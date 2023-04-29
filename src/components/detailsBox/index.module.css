@@ -17,6 +17,7 @@
     overflow-x: scroll;
     border-radius: 1rem;
     position: relative;
+    box-sizing: border-box;
 }
 
 .next7::-webkit-scrollbar {
@@ -55,5 +56,34 @@
     font-size: 1.5rem;
 }
 
+.upcoming {
+    display: none;
+}
 
-@media (max-height: 1135px) {}
+@media (max-width: 1135px) {
+    .right {
+        background: unset;
+        height: unset;
+        width: 100%;
+        border: unset;
+        box-shadow: unset;
+        padding: 0 1rem;
+        margin: 3rem 0;
+    }
+
+    .next7Wrap::after {
+        width: 5rem;
+    }
+
+    .highligths {
+        text-align: center;
+    }
+
+    .upcoming {
+        display: block;
+        margin-bottom: 2rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}

@@ -10,6 +10,12 @@ body {
     color: white;
 }
 
+@media (max-width:1135px) {
+    body {
+        background: linear-gradient(#283135, #1d2427);
+    }
+}
+
 .App {
     max-width: 100vw;
     overflow: hidden;

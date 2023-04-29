@@ -6,6 +6,8 @@ export default function DetailsBox() {
     return (
         <div className={classes.right}>
 
+            <div className={classes.upcoming}>Upcoming Days</div>
+
             <div className={classes.next7Wrap}>
                 <div className={classes.next7}>
                     <DayCard day="30 Jul" temp="32" />

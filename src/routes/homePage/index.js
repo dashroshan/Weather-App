@@ -9,6 +9,7 @@ export default function HomePage() {
         <section className={classes.home}>
             <TodayBox />
             <DetailsBox />
+            <footer>Made with 💙 by Roshan</footer>
         </section>
     );
 }

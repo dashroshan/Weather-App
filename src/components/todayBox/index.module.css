@@ -109,3 +109,19 @@
 .degreec {
     color: #13BFF8;
 }
+
+
+@media (max-width: 1135px) {
+    .left {
+        height: 85vh;
+        min-width: unset;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 0 0 3rem 3rem;
+    }
+
+    .weatherIcon {
+        width: auto;
+        height: 15rem;
+    }
+}
