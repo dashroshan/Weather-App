@@ -1,5 +1,6 @@
 import classes from "./index.module.css";
 
+// Icons for different weather conditions
 import i_1_30 from "../../assets/weather/1 30.webp";
 import i_2_3_4 from "../../assets/weather/2 3 4.webp";
 import i_5 from "../../assets/weather/5.webp";
@@ -19,6 +20,7 @@ import i_39_40 from "../../assets/weather/39 40.webp";
 import i_41_42 from "../../assets/weather/41 42.webp";
 import i_43 from "../../assets/weather/43.webp";
 
+// Mapping different weather values returned by Azure Maps API to their images
 const weatherIcons = {
     "1": i_1_30,
     "2": i_2_3_4,
@@ -62,6 +64,7 @@ const weatherIcons = {
     "44": i_19_20_21_44,
 }
 
+// Card for showing the next 10 days weather details
 export default function DayCard(props) {
     return (
         <div className={classes.dayCard}>

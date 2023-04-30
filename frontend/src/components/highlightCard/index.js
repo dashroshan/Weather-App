@@ -7,6 +7,7 @@ import rainIcon from "../../assets/rain.webp";
 import precipitationIcon from "../../assets/precipitation.webp";
 import TextTransition, { presets } from 'react-text-transition';
 
+// Details about each type of weather highlight
 const data = {
     sunlight: {
         title: "Sunlight",
@@ -40,6 +41,7 @@ const data = {
     }
 };
 
+// Card used to show current day weather highlights
 export default function HighlightCard(props) {
     const cardData = data[props.type];
 
