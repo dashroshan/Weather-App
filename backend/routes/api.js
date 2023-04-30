@@ -40,6 +40,7 @@ router.get(
                 [yyyy, mm, dd, hh, mi] = day.date.split(/[/:\-T]/);
                 if (dd === today) {
                     wData = {
+                        icon: day.day.iconCode,
                         temp: ((day.temperature.minimum.value + day.temperature.maximum.value) / 2).toFixed(1),
                         condition: day.day.iconPhrase,
                         tempFeels: ((day.realFeelTemperature.minimum.value + day.realFeelTemperature.maximum.value) / 2).toFixed(1),
