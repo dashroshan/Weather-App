@@ -13,10 +13,6 @@ export default function TodayBox(props) {
                     <sup>o</sup>C
                 </div>
 
-                <div className={classes.degreef}>
-                    <sup>o</sup>F
-                </div>
-
                 <div className={classes.address}>
                     <img src={locationIcon} alt="location" />
                     <input type="text" value={props.location} onChange={(e) => {
