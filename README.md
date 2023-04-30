@@ -9,3 +9,42 @@
 <img src="./frontend/public/banner.png" width="100%"/>
 
 <br>
+
+# Setup process
+
+## Frontend
+
+Run the below command in the _frontend_ folder.
+
+```
+npm install
+```
+
+In _frontend/index.js_ swap the commented lines for _window.APIROOT_ to run frontend separately or through the backend server as needed.
+
+If running through backend server, run the below command.
+
+```
+npm run build
+```
+
+## Backend
+
+Run the below command in the _backend_ folder.
+
+```
+npm install
+```
+
+Create a _secrets.env_ file with below contents.
+
+```
+PORT = 4000
+KEY = <Azure maps private key here>
+```
+
+Start the server with the below command.
+
+```
+node index.js
+```
