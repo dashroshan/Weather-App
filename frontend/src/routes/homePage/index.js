@@ -19,6 +19,7 @@ export default function HomePage() {
             const { data: res } = await axios.get(window.APIROOT + 'weather', { params: { address: location, today: "30" } });
             setData(res);
             setLocation(res.location);
+            localStorage.setItem("weatherAppAddress", res.location);
         } catch (error) {
             console.log(error);
         }
