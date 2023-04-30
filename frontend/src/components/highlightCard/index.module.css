@@ -12,6 +12,12 @@
 }
 
 .cardDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardDetails {
     text-align: center;
     white-space: nowrap;
 }

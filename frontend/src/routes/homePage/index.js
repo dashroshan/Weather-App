@@ -12,11 +12,14 @@ const getSavedData = (data, value) =>
 
 export default function HomePage() {
     const [data, setData] = useState(null);
+    const [location, setLocation] = useState(getSavedData("weatherAppAddress", "Puri,Odisha"));
 
     async function updateLocation() {
         try {
-            const { data: res } = await axios.get(window.APIROOT + 'weather', { params: { address: data?.location || getSavedData("weatherAppAddress", "Puri,Odisha"), today: "30" } });
+            const { data: res } = await axios.get(window.APIROOT + 'weather', { params: { address: location, today: "30" } });
             setData(res);
+            setLocation(res.location);
+            console.log("API Called");
         } catch (error) {
             console.log(error);
         }
@@ -39,7 +42,7 @@ export default function HomePage() {
     return (
         <section className={classes.home}>
             {data ? <>
-                <TodayBox updateLocation={updateLocation} data={data} setData={setData} />
+                <TodayBox updateLocation={updateLocation} setLocation={setLocation} data={data} location={location} setData={setData} />
                 <DetailsBox data={data} />
             </> : null}
             <footer>Made with 💙 by Roshan</footer>

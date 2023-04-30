@@ -1,5 +1,4 @@
 import classes from "./index.module.css";
-
 import weatherIcon from "../../assets/17.png";
 
 export default function DayCard(props) {

@@ -3,6 +3,8 @@ import weatherIcon from "../../assets/17.png";
 import locationIcon from "../../assets/location.svg";
 import searchIcon from "../../assets/search.svg";
 
+import TextTransition, { presets } from 'react-text-transition';
+
 export default function TodayBox(props) {
     return (
         <div className={classes.left}>
@@ -17,8 +19,8 @@ export default function TodayBox(props) {
 
                 <div className={classes.address}>
                     <img src={locationIcon} alt="location" />
-                    <input type="text" value={props.data.location} onChange={(e) => {
-                        props.setData({ ...props.data, location: e.target.value });
+                    <input type="text" value={props.location} onChange={(e) => {
+                        props.setLocation(e.target.value);
                     }} />
                 </div>
 
@@ -34,8 +36,8 @@ export default function TodayBox(props) {
 
 
             <div className={classes.details}>
-                <div className={classes.temp}>{props.data.today.temp}</div>
-                <div className={classes.weatherName}>{props.data.today.condition}</div>
+                <div className={classes.temp}><TextTransition springConfig={presets.wobbly}>{props.data.today.temp}</TextTransition></div>
+                <div className={classes.weatherName}><TextTransition springConfig={presets.wobbly}>{props.data.today.condition}</TextTransition></div>
                 <div className={classes.feelsLike}>Feels like {props.data.today.tempFeels}<sup>o</sup></div>
             </div>
         </div>

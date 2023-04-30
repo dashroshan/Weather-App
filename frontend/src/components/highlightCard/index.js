@@ -5,6 +5,7 @@ import windIcon from "../../assets/wind.png";
 import cloudIcon from "../../assets/cloud.png";
 import rainIcon from "../../assets/rain.png";
 import precipitationIcon from "../../assets/precipitation.png";
+import TextTransition, { presets } from 'react-text-transition';
 
 const data = {
     sunlight: {
@@ -50,7 +51,7 @@ export default function HighlightCard(props) {
                 </div>
                 <div className={classes.cardDetails}>
                     <div>{cardData.title}</div>
-                    <div>{props.data}</div>
+                    <div><TextTransition springConfig={presets.wobbly}>{props.data}</TextTransition></div>
                     <div>{cardData.unit}</div>
                 </div>
             </div>
