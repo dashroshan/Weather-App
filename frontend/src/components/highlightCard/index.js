@@ -50,7 +50,7 @@ export default function HighlightCard(props) {
                 </div>
                 <div className={classes.cardDetails}>
                     <div>{cardData.title}</div>
-                    <div>2</div>
+                    <div>{props.data}</div>
                     <div>{cardData.unit}</div>
                 </div>
             </div>

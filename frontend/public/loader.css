@@ -1,10 +1,9 @@
 :root {
-    --backgroundClr: black;
-    --loaderClr: #00a5fe;
+    --loaderClr: #13BFF8;
 }
 
 #loader_block {
-    background: var(--backgroundClr);
+    background: linear-gradient(#283135, #1d2427);
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
