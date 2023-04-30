@@ -10,7 +10,7 @@ export default function DetailsBox(props) {
 
             <div className={classes.next7Wrap}>
                 <div className={classes.next7}>
-                    {props.data.upcoming.map((e, id) => <DayCard key={id} day={e.date} temp={e.temp} />)}
+                    {props.data.upcoming.map((e, id) => <DayCard key={id} day={e.date} temp={e.temp} icon={e.icon} />)}
                 </div>
             </div>
 

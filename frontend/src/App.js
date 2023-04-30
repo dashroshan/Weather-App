@@ -1,10 +1,7 @@
 import AnimatedCursor from "react-animated-cursor";
 import { Route, Routes, Navigate } from "react-router-dom";
-import { useEffect } from "react";
 
 import HomePage from "./routes/homePage";
-
-import hideLoader from "./utils/hideLoader";
 
 export default function App() {
     return (

@@ -1,5 +1,5 @@
 import classes from "./index.module.css";
-import weatherIcon from "../../assets/17.png";
+import weatherIcon from "../../assets/17.webp";
 import locationIcon from "../../assets/location.svg";
 import searchIcon from "../../assets/search.svg";
 
@@ -21,7 +21,11 @@ export default function TodayBox(props) {
                     <img src={locationIcon} alt="location" />
                     <input type="text" value={props.location} onChange={(e) => {
                         props.setLocation(e.target.value);
-                    }} />
+                    }} onKeyDown={
+                        (e) => {
+                            if (e.key === "Enter") props.updateLocation();
+                        }
+                    } />
                 </div>
 
                 <div className={classes.editAddress} onClick={props.updateLocation}>
@@ -36,7 +40,7 @@ export default function TodayBox(props) {
 
 
             <div className={classes.details}>
-                <div className={classes.temp}><TextTransition springConfig={presets.wobbly}>{props.data.today.temp}</TextTransition></div>
+                <div className={classes.tempWrap}><div className={classes.temp}><TextTransition springConfig={presets.wobbly}>{props.data.today.temp}</TextTransition></div></div>
                 <div className={classes.weatherName}><TextTransition springConfig={presets.wobbly}>{props.data.today.condition}</TextTransition></div>
                 <div className={classes.feelsLike}>Feels like {props.data.today.tempFeels}<sup>o</sup></div>
             </div>

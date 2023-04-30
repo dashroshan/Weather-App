@@ -19,7 +19,6 @@ export default function HomePage() {
             const { data: res } = await axios.get(window.APIROOT + 'weather', { params: { address: location, today: "30" } });
             setData(res);
             setLocation(res.location);
-            console.log("API Called");
         } catch (error) {
             console.log(error);
         }

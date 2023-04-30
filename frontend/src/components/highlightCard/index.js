@@ -1,10 +1,10 @@
 import classes from "./index.module.css";
 
-import sunIcon from "../../assets/sun.png";
-import windIcon from "../../assets/wind.png";
-import cloudIcon from "../../assets/cloud.png";
-import rainIcon from "../../assets/rain.png";
-import precipitationIcon from "../../assets/precipitation.png";
+import sunIcon from "../../assets/sun.webp";
+import windIcon from "../../assets/wind.webp";
+import cloudIcon from "../../assets/cloud.webp";
+import rainIcon from "../../assets/rain.webp";
+import precipitationIcon from "../../assets/precipitation.webp";
 import TextTransition, { presets } from 'react-text-transition';
 
 const data = {
