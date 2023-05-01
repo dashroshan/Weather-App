@@ -29,7 +29,7 @@ router.get(
                 [yyyy, mm, dd, hh, mi] = e.date.split(/[/:\-T]/);
                 return {
                     date: `${dd} ${months[parseInt(mm, 10)]}`,
-                    temp: ((e.temperature.minimum.value + e.temperature.maximum.value) / 2).toFixed(1),
+                    temp: Math.ceil((e.temperature.minimum.value + e.temperature.maximum.value) / 2),
                     icon: e.day.iconCode
                 };
             });
@@ -41,9 +41,9 @@ router.get(
                 if (parseInt(dd, 10) === parseInt(today, 10)) {
                     wData = {
                         icon: day.day.iconCode,
-                        temp: ((day.temperature.minimum.value + day.temperature.maximum.value) / 2).toFixed(1),
+                        temp: Math.ceil((day.temperature.minimum.value + day.temperature.maximum.value) / 2),
                         condition: day.day.iconPhrase,
-                        tempFeels: ((day.realFeelTemperature.minimum.value + day.realFeelTemperature.maximum.value) / 2).toFixed(1),
+                        tempFeels: Math.ceil((day.realFeelTemperature.minimum.value + day.realFeelTemperature.maximum.value) / 2),
                         sunlight: day.hoursOfSun,
                         rainProbability: day.day.rainProbability,
                         windSpeed: day.day.wind.speed.value,
