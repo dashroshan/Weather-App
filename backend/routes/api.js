@@ -38,7 +38,7 @@ router.get(
             let wData = {};
             for (let day of weather.forecasts) {
                 [yyyy, mm, dd, hh, mi] = day.date.split(/[/:\-T]/);
-                if (dd === today) {
+                if (parseInt(dd, 10) === parseInt(today, 10)) {
                     wData = {
                         icon: day.day.iconCode,
                         temp: ((day.temperature.minimum.value + day.temperature.maximum.value) / 2).toFixed(1),

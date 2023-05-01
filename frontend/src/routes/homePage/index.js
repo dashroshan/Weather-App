@@ -21,7 +21,8 @@ export default function HomePage() {
     // Updates the weather data for the new location and saves the location in localstorage
     async function updateLocation() {
         try {
-            const { data: res } = await axios.get(window.APIROOT + 'weather', { params: { address: location, today: "30" } });
+            const date = new Date();
+            const { data: res } = await axios.get(window.APIROOT + 'weather', { params: { address: location, today: date.getDate().toString() } });
             setData(res);
             setLocation(res.location);
             localStorage.setItem("weatherAppAddress", res.location);
